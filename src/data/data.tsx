@@ -2,7 +2,7 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
-  CalendarIcon,
+  //CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'My Resume',
+  description: "This is the online version of my resume",
 };
 
 /**
@@ -57,7 +57,10 @@ export const SectionId = {
   Contact: 'contact',
   Portfolio: 'portfolio',
   Resume: 'resume',
+  Experience: 'experience',
   Skills: 'skills',
+  Certificate: 'certificate',
+  Grants: 'grants',
   Stats: 'stats',
   Testimonials: 'testimonials',
 } as const;
@@ -69,18 +72,19 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Mai TN Nguyen`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a doctoral researcher in <strong className="text-stone-100">Computational Biology and Cancer Research</strong>, currently working
+        at <strong className="text-stone-100">University of Helsinki</strong>. My main doctoral research projects focus on the applications of 
+        <strong className="text-stone-100">circulating tumor DNA (ctDNA)</strong> and its biology in ovarian cancer.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        While I am doing research in cancer biology, my background was in <strong className="text-stone-100">Finance and Banking</strong> with 
+        many years working as <strong className="text-stone-100">Financial Analyst - Data Scientist - Business Information System</strong>. 
+        I want to pursue further the computational tools that support the decision making procedure, which is relied on
+        <strong className="text-stone-100">meaningful signals from the data</strong>.
       </p>
     </>
   ),
@@ -108,12 +112,11 @@ export const aboutData: About = {
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Helsinki, Finland', Icon: MapIcon},
+    {label: 'Nationality', text: 'Vietnamese / Finnish', Icon: FlagIcon},
+    {label: 'Interests', text: 'Reading, Travelling, Hiking', Icon: SparklesIcon},
+    {label: 'Study', text: 'University of Helsinki', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'University of Helsinki / Data Scientist Freelancer', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -125,33 +128,33 @@ export const skills: SkillGroup[] = [
     name: 'Spoken languages',
     skills: [
       {
-        name: 'English',
+        name: 'Vietnames',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'English',
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Swedish',
+        level: 4,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Programming languages',
     skills: [
       {
-        name: 'React',
-        level: 9,
+        name: 'R',
+        level: 8,
       },
       {
-        name: 'Typescript',
+        name: 'Python',
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'SQL',
+        level: 7,
       },
     ],
   },
